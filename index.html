@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 2rem 1rem;
+            max-width: max-content;
+            width: 100%;
+            margin: 0 auto;
+            top: 1rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .col2 {
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex input {
+            width: 100%;
+        }
+
+        .col2 input {
+            width: 44%;
+        }
+
+        input {
+            font-size: 1.5rem;
+            height: 2rem;
+            padding: 10px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            border: 1px solid;
+            border-color: gray;
+        }
+
+        input:focus {
+            outline: none !important;
+            border: 1px solid #8ac2ee;
+            box-shadow: 0 0 10px #8ac2ee;
+        }
+
+        .agree {
+            flex-basis: 30%;
+        }
+
+        .agrees {
+            flex-basis: 70%;
+        }
+
+        .register {
+            background-color: #428bca;
+            border-radius: 5px;
+            padding: 2px 5px;
+            color: white;
+        }
+
+        .agrees a {
+            text-decoration: none;
+            color: #428bca;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            font-size: 1.75rem;
+            padding: 10px 60px;
+            width: 45%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .register-button {
+            background-color: #428bca;
+
+        }
+
+        .signin-button {
+            background-color: #5cb85c;
+        }
+
+        @media screen and (max-width:600px) {
+            .signUp {
+                width: 90%;
+            }
+
+            .flex {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .flex input {
+                width: 100%;
+                height: 2rem;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                box-shadow: aqua;
+
+            }
+
+            .col2 input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <form class="signUp">
+        <div class="flex col2">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="flex">
+            <input type="tel" required placeholder="Mobile No.">
+        </div>
+        <div class="flex">
+            <input type="email" class="email" required placeholder="Email Address">
+        </div>
+        <div class="flex col2">
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+        </div>
+
+        <section class="flex col2">
+            <label for="agree" class='agree'><input type="checkbox" id="agree">I Agree</label>
+            <p class="agrees">By clicking <span class="register">Register</span>, you agree to the <a href='/'>agrees
+                    and Conditions</a> set out by this site. including our Cookie Use.
+            <p>
+        </section>
+        <div class="flex col2">
+            <button class="register-button">Register</button>
+            <button class="signin-button">Sign In</button>
+        </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
